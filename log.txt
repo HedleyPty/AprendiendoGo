@@ -1,43 +1,43 @@
-Sun Jul 24 09:09:07 2016
+Sun Jul 31 22:04:57 2016
 Linux-3.8.11-armv7l-with-Ubuntu-16.10-yakkety
 Ren'Py 6.99.10.1227
  
 
-Bootstrap to the start of init.init took 0.78s
-Early init took 0.24s
-Loader init took 0.37s
-Loading error handling took 0.52s
-Loading script took 1.05s
-Loading persistent took 0.37s
+Bootstrap to the start of init.init took 0.36s
+Early init took 0.80s
+Loader init took 0.04s
+Loading error handling took 0.16s
+Loading script took 1.21s
+Loading persistent took 0.13s
 Importing _renpysteam: ImportError('No module named _renpysteam',)
-Running init code took 1.36s
-Loading analysis data took 0.13s
-Analyze and compile ATL took 0.02s
+Running init code took 0.37s
+Loading analysis data took 0.06s
+Analyze and compile ATL took 0.01s
 Index archives took 0.00s
-Dump and make backups. took 0.55s
+Backing up script files to '/home/hedley/.renpy/backups/AprendiendoGo':
+Dump and make backups. took 0.25s
 Cleaning cache took 0.00s
 Making clean stores took 0.00s
 DPI scale factor: 1.000000
-Creating interface object took 1.27s
+Creating interface object took 0.28s
 Cleaning stores took 0.00s
-Init translation took 0.05s
-Build styles took 0.00s
-Load screen analysis took 0.14s
-Analyze screens took 0.00s
-Save screen analysis took 0.00s
-Prepare screens took 0.73s
+Init translation took 0.02s
+Build styles took 0.01s
+Load screen analysis took 0.00s
+Analyze screens took 0.07s
+Save screen analysis took 0.30s
+Prepare screens took 0.23s
 Save pyanalysis. took 0.00s
-Save bytecode. took 0.00s
+Save bytecode. took 0.11s
 Running _start took 0.01s
-Performance test:
-Interface start took 0.08s
+Interface start took 0.11s
 
 primary display bounds: (0, 0, 1366, 768)
 Windowed mode.
 Screen sizes: virtual=(800, 600) physical=(800, 600) drawable=(800, 600)
 Vendor: 'VMware, Inc.'
 Renderer: 'Gallium 0.4 on llvmpipe (LLVM 3.8, 128 bits)'
-Version: '3.0 Mesa 11.2.1'
+Version: '3.0 Mesa 12.0.1'
 Display Info: <Info({'blit_sw_CC': False, 'bitsize': 32, 'wm': True, 'losses': (0, 0, 0, 8), 'hw': False, 'masks': (16711680L, 65280L, 255L, 0L), 'current_h': 768, 'current_w': 1366, 'shifts': (16, 8, 0, 0), 'blit_sw_A': False, 'blit_hw': False, 'blit_sw': False, 'bytesize': 4, 'blit_hw_CC': False, 'blit_hw_A': False, 'video_mem': 268435456})>
 Extensions:
     
@@ -63,6 +63,7 @@ Extensions:
     GL_ARB_conditional_render_inverted
     GL_ARB_conservative_depth
     GL_ARB_copy_buffer
+    GL_ARB_cull_distance
     GL_ARB_debug_output
     GL_ARB_depth_buffer_float
     GL_ARB_depth_clamp
@@ -85,6 +86,7 @@ Extensions:
     GL_ARB_half_float_vertex
     GL_ARB_instanced_arrays
     GL_ARB_internalformat_query
+    GL_ARB_internalformat_query2
     GL_ARB_invalidate_subdata
     GL_ARB_map_buffer_alignment
     GL_ARB_map_buffer_range
@@ -154,6 +156,7 @@ Extensions:
     GL_ARB_window_pos
     GL_ATI_blend_equation_separate
     GL_ATI_draw_buffers
+    GL_ATI_fragment_shader
     GL_ATI_separate_stencil
     GL_ATI_texture_compression_3dc
     GL_ATI_texture_env_combine3
@@ -261,14 +264,4 @@ Texture testing:
 - 512px textures work.
 - 1024px textures work.
 - 2048px textures work.
-Total time until interface ready: 23.0850610733s
-- Target is 5 frames in 0.333333333333 seconds.
-- Frame drawn at 0.000000 seconds.
-- Frame drawn at 5.035268 seconds.
-Cleaning stores took 0.00s
-Init translation took 0.96s
-Build styles took 0.00s
-Load screen analysis took 0.14s
-Analyze screens took 0.02s
-Prepare screens took 0.00s
-Running _start took 0.01s
+Total time until interface ready: 6.4559378624s

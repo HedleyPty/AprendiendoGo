@@ -175,7 +175,7 @@ screen nvl(dialogue, items=None):
 # http://www.renpy.org/doc/html/screen_special.html#main-menu
 
 screen main_menu():
-
+    $renpy.music.play( "images/Poofy Reel.mp3")
     # Esta linea asegura que las otras pantallas de menú son reemplazadas.
     tag menu
 
@@ -225,13 +225,13 @@ screen navigation():
 
         has vbox
 
-        textbutton _("Return") action Return()
-        textbutton _("Preferences") action ShowMenu("preferences")
-        textbutton _("Save Game") action ShowMenu("save")
-        textbutton _("Load Game") action ShowMenu("load")
-        textbutton _("Main Menu") action MainMenu()
-        textbutton _("Help") action Help()
-        textbutton _("Quit") action Quit()
+        textbutton _("Regresar") action Return()
+        textbutton _("Preferencias") action ShowMenu("preferences")
+        textbutton _("Salvar") action ShowMenu("save")
+        textbutton _("Guardar") action ShowMenu("load")
+        textbutton _("Menu Principal") action MainMenu()
+        textbutton _("Ayuda") action Help()
+        textbutton _("Salir") action Quit()
 
 init -2:
 
@@ -558,4 +558,27 @@ init -2:
         selected_idle_color "#cc08"
         selected_hover_color "#cc0"
         insensitive_color "#4448"
-
+screen _music():
+    vbox:
+        xalign 0.05
+        yalign 0.05
+        if renpy.music.is_playing():
+            text '{color=#000}Estas escuchando:\n[now_playing]{/color}'
+            textbutton _("Detener musica") action Stop('music')
+            textbutton _("Cambiar la musica") action Function(cambiarMusica, musica)
+        else:
+            textbutton _("Reiniciar la musica") action Play('music', musica)
+    if info:
+        vbox:
+            xalign .95
+            yalign .05
+            if not enlaces:
+                textbutton _("Mostrar enlaces útiles") action SetVariable("enlaces", True)
+            else:
+                textbutton _("Ocultar enlaces útiles") action SetVariable("enlaces", False)
+                text '{color=#000}{a=https://es.wikipedia.org/wiki/Golang}Página de la Wikipedia del lenguaje Go{/a}{/color}'
+                text '{color=#000}{a=https://es.wikipedia.org/wiki/Python}Página oficial de Go{/a}{/color}'
+                text '{color=#000}{a=http://python.org}Parque de diversiones de Go{/a}{/color}'
+                text "{color=#000}{a=[tipJar]}Página oficial de Ren'py{/a}{/color}"
+                text '{color=#000}{a=[tipJar]}Jarrón de propinas de PayPal{/a}{/color}'
+                

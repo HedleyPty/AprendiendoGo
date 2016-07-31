@@ -1,0 +1,112 @@
+
+Updating source code.
+
+Updating build files.
+Resolved location of library project to: /usr/share/games/renpy/rapt/android-sdk-r24.4.1/extras/google/play_apk_expansion/downloader_library
+Updated and renamed default.properties to project.properties
+Updated local.properties
+Added file ./build.xml
+Updated file ./proguard-project.txt
+
+
+
+
+Creating assets directory.
+
+Packaging internal data.
+
+I'm using Ant to build the package.
+Buildfile: /usr/share/games/renpy/rapt/build.xml
+
+-set-mode-check:
+
+-set-release-mode:
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-pre-build:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 24.4.1
+ [checkenv] Installed at /usr/share/games/renpy/rapt/android-sdk-r24.4.1
+
+-setup:
+     [echo] Project Name: AprendiendoGo-1
+  [gettype] Project Type: Application
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 23.0.1
+     [echo] Resolving Build Target for AprendiendoGo-1...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+     [echo] ----------
+     [echo] Creating output directories if needed...
+     [echo] ----------
+     [echo] Resolving Dependencies for AprendiendoGo-1...
+[dependency] Library dependencies:
+[dependency] 
+[dependency] ------------------
+[dependency] Ordered libraries:
+[dependency] 
+[dependency] ------------------
+     [echo] ----------
+     [echo] Building Libraries with 'release'...
+
+nodeps:
+
+-set-mode-check:
+
+-set-release-mode:
+
+-release-obfuscation-check:
+     [echo] proguard.config is ${proguard.config}
+
+-pre-build:
+
+-check-env:
+ [checkenv] Android SDK Tools Revision 24.4.1
+ [checkenv] Installed at /usr/share/games/renpy/rapt/android-sdk-r24.4.1
+
+-setup:
+     [echo] Project Name: library
+  [gettype] Project Type: Android Library
+
+-build-setup:
+[getbuildtools] Using latest Build Tools: 23.0.1
+     [echo] Resolving Build Target for library...
+[gettarget] Project Target:   Android 5.1.1
+[gettarget] API level:        22
+     [echo] ----------
+     [echo] Creating output directories if needed...
+    [mkdir] Created dir: /usr/share/games/renpy/rapt/android-sdk-r24.4.1/extras/google/play_licensing/library/bin/rsObj
+    [mkdir] Created dir: /usr/share/games/renpy/rapt/android-sdk-r24.4.1/extras/google/play_licensing/library/bin/rsLibs
+     [echo] ----------
+     [echo] Resolving Dependencies for library...
+[dependency] Library dependencies:
+[dependency] No Libraries
+[dependency] 
+[dependency] ------------------
+
+-code-gen:
+[mergemanifest] No changes in the AndroidManifest files.
+     [echo] Handling aidl files...
+     [aidl] No AIDL files to compile.
+     [echo] ----------
+     [echo] Handling RenderScript files...
+     [echo] ----------
+     [echo] Handling Resources...
+     [aapt] Generating resource IDs...
+     [aapt] /usr/share/games/renpy/rapt/android-sdk-r24.4.1/build-tools/23.0.1/aapt: 2: /usr/share/games/renpy/rapt/android-sdk-r24.4.1/build-tools/23.0.1/aapt: Syntax error: newline unexpected (expecting ")")
+
+BUILD FAILED
+/usr/share/games/renpy/rapt/android-sdk-r24.4.1/tools/ant/build.xml:597: The following error occurred while executing this line:
+/usr/share/games/renpy/rapt/android-sdk-r24.4.1/tools/ant/build.xml:649: The following error occurred while executing this line:
+/usr/share/games/renpy/rapt/android-sdk-r24.4.1/tools/ant/build.xml:694: null returned: 2
+
+Total time: 12 seconds
+
+
+
+
+The build seems to have failed.
