@@ -128,7 +128,7 @@ label q4:
             h "Eso es correcto!!!"
             jump n2
 label n2:
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     if error == "":
         h "Veo que has acertado a la primera..."
         h "Sin embargo, más adelante verás que cometer errores es muy importante para programar"
@@ -159,7 +159,7 @@ label n2:
     $count=0
     $error=""
     hide text
-    hide python_logo
+    hide gopher_logo
     jump q5
 label q5:
     if error != "":
@@ -178,7 +178,7 @@ label q5:
 
 label n3:
     show text "{size=40}{color=#000}Capítulo dos\n\n\nLa Abstracción{/color}{/size}" at top
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     h "Qué pregunta más tonta..."
     h "Es cierto que a la tráquea le llega comida de cuando en cuando..."
     h "Pero no en personas sanas..."
@@ -189,7 +189,7 @@ label n3:
         counter=9
         
     hide text
-    hide python_logo
+    hide gopher_logo
     jump q6
 label q6:
     if counter == 9:
@@ -245,7 +245,7 @@ label q6:
 
 label n4:
     show text "{size=40}{color=#000}Capítulo dos\n\n\nLa Abstracción{/color}{/size}" at top
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     h "Wao, hemos visto como se conectan los órganos del tubo digestivo uno tras otro"
     h "En el caso del carro, del reloj, la página web y del video juego podemos hacer exactamente lo mismo..."
     h "Aún más NO necesitamos ningún programa para ver como estos elementos se relacionan entre sí"
