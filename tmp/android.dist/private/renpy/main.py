@@ -256,10 +256,6 @@ def main():
 
     log_clock("Early init")
 
-    # Check if the game directory exists and is a directory
-    if not os.path.isdir(renpy.config.gamedir):
-        raise Exception("The game directory '%s' doesn't exist" % renpy.config.gamedir)
-
     # Note the game directory.
     game.basepath = renpy.config.gamedir
     renpy.config.searchpath = [ renpy.config.gamedir ]

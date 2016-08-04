@@ -1,9 +1,3 @@
-
-
-
-# The game starts here.
-# - El juego comienza aquí.
-
 label inicio:
     show screen _music
     if persistent.console_:
@@ -22,36 +16,34 @@ label inicio_:
     show gopher_logo at truecenter
     show text "{color=#000000}Logo de Go: Gopher{/color}" at subtitle
     h "Hola nuevamente, me llamo Hedley"
+    h "Soy un médico gradudado de la Universidad de Panamá, tengo una maestría en Biología molecular y estoy estudiando un doctorado en epidemiología en el Instituto Karolinska"
     h "En esta ocasión les voy a mostrar ciertas cositas fundamentales del lenguaje Go."
     h "El lenguaje Go es bastante nuevo, en comparación con la enorme familia C (C, Objective C, C++ o C#), Python, Java, JavaScript, etc"
     h "Sin embargo, la idea de este lenguaje, es al igual que otro llamado Swift, el de proveer las mejorar ciertos aspectos de sus predecesores."
-    
-    h "Saludos a todos, me llamo Hedley!"
-    h "Soy un médico gradudado de la Universidad de Panamá, tengo una maestría en Biología molecular y estoy estudiando un doctorado en epidemiología en el Instituto Karolinska"
-    h "No se si sea el más adecuado, pero les voy a enseñar lo poco que sé de Python"
-    h "Y para sonar más interesante, les digo..."
-    show renpy_logo:
-        xpos 0.8
-        ypos 0.2
-    show text "{color=#000000}Logo de Ren'py{/color}" at Position(xpos=0.80, xanchor='center', ypos=0.65, yanchor='top')
-    h "que este tutorial, está desarrollado en Ren'py el cual es una implentación de Python"
-    h "Ren'py es un gestor de {color=#ff0}novelas gráficas interactivas{/color}, las cuales son una serie de {color=#ff0}diálogos{/color} (así como una telenovela, pero leída).\nAparecen dibujos de personajes que aparecen con su cuadro de diálogos"
-    h "Además hay menúes que sirven para valorar el conocimiento de la trama o para tomar decisiones"
-    h "Más adelante tendremos acceso a una herramienta de Ren'py que nos va a ayudar a comprender mucho mejor los conceptos aquiridos en este tutorial"
-    hide renpy_logo 
-    hide text
+    h "La gran ventaja de Go es que este puede correr en múltiples procesos simultáneamente"
+
     $info = True
     h "En la esquina superior derecha, veras un botón que muestra u oculta una serie de enlaces útiles"
-    h "Estos enlaces son la página de la Wikipedia de Python, la página oficial de Python, la página de Ren'py y mi jarrón de propinas de PayPal por si quieres cooperar conmigo"
+    h "Estos enlaces son la página oficial del lenguaje Go, la página de la Wikipedia, el parque recreativo de Go y mi jarrón de propinas de PayPal por si quieres cooperar conmigo"
     h "Vamos a empezar..."
+    h "La sección siguiente trata de principios básicos de programación"
+    h "Es muy similar a lo que mostré en mi aplicación para aprender Python"
+    h "Puede adquirir la aplicación para aprender Python {a=https://play.google.com/store/apps/details?id=com.hedleypanama}aqui{/a}"
+    hide gopher_logo at truecenter
+    menu:
+        "Si lo deseas, puedes saltarte esta parte y entrar de lleno a aprender Go\nPero no te recomiendo hacerlo si nunca has programado\n¿Qué deseas hacer?"
+        "Deseo conocer los principios básicos de programación":
+            pass
+        "Deseo entrar de lleno a aprender Go":
+            jump Go_1
     #hide text
     jump chp1
 label chp1:
-    show python_logo
+    show gopher_logo
     show text "{size=40}{color=#000}Capítulo uno\n\n\n¿Qué es programar?{/color}{/size}" at top
     h "Para mi, aprender a programar me pareció bastante frustrante!"
     h "Verán, aprendí varios lenguajes de programación, pero no supe lo que era programar..."
-    h "Vamos a intentar aprender a programar antes de entrar de lleno a Python"
+    h "Vamos a intentar aprender a programar antes de entrar de lleno a Go"
     h "Vamos a iniciar con el concepto del {color=#ff0}proyecto{/color}"
     h "Los {color=#ff0}proyectos{/color} están asociados a 2 conceptos:"
     h 'El primero es que el proyecto debe tener la finalidad de {color=#ff0}resolver un problema{/color}'
@@ -61,31 +53,29 @@ label chp1:
     
     $current="q1"
     $ error=""
+    
     label q1:
         if error != "":
             h "{color=#f00}[error]{/color}"
-        hide python_logo
+        hide gopher_logo
         menu:
-            "¿Cuál de los siguientes conceptos NO están asociados al concepto del proyecto"
-            "La nube":
-                jump q2
-                
-            "Resolver un problema con un fin específico":
-                $error="en efecto, eso es correcto, busca la opción {color=#ff0}incorrecta{/color}"
+            "¿Cuál de los siguientes conceptos están asociados al concepto del proyecto"
+            "Un perro":
+                $error="El perro es un animalito, pero no es un proyecto, por lo tanto esta opción es {color=#ff0}incorrecta{/color}"
                 $renpy.jump(current)
                 
-            "Una carpeta con piezas de un sistema":
-                $error="Las carpetas usualmente se asocian a un proyecto: eso es correcto, busca la opción {color=#ff0}incorrecta{/color}"
+            "Resolver los problemas de un país":
+                $error="en efecto, eso es incorrecto, el proyecto busca resolver una serie de problemas específicos, hablár de un país es muy general"
                 $renpy.jump(current)
+            
             "Un sistema con partes que interaccionan entre ellas":
-                $error="Esto es correcto, un {color=#ff0}sistema{/color} tiene partes que interaccionan entre ellas"
-                $renpy.jump(current)
+                pass
     label q2:
-        show python_logo at truecenter
+        show gopher_logo at truecenter
         h "La nube es la opción incorrecta! vamos adelante"
         h "Vamos a ver un ejemplo tangible"
         h "Veamos un reloj..."
-        hide python_logo
+        hide gopher_logo
         show reloj at truecenter
         h "El reloj analógico es un {color=#ff0}sistema complejo{/color} que permite saber la hora"
         h "Mediante el movimiento de sus 3 manecillas a diferentes velocidades"
@@ -115,14 +105,13 @@ label chp1:
                 $error= ""
                 jump partes1
     label partes1:
-        show python_logo at truecenter
+        show gopher_logo at truecenter
         h "¡En efecto! aunque el reloj es una máquina aparentemente compleja, que tiene partes sencillas"
         h "Regresando a los proyectos, los proyectos tienen una serie de partes que se relacionan entre sí..."
         h "Pero para serles sinceros no soy un relojero, y conozco muy poco acerca de como funcionan esos aparatos"
         h "Sin embargo, podemos {color=#ff0}imaginar{/color} o deducir de manera correcta que el reloj analógico está compuesto de {color=#ff0}piezas{/color} que trabajan de manera {color=#ff0}coordinada{/color}"
         h "Teniendo en cuenta esto..."
-        hide python_logo
-        $ count=0
+        hide gopher_logo
         $error =""
         jump q4
 label q4:
@@ -149,7 +138,7 @@ label q4:
             h "Eso es correcto!!!"
             jump n2
 label n2:
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     if error == "":
         h "Veo que has acertado a la primera..."
         h "Sin embargo, más adelante verás que cometer errores es muy importante para programar"
@@ -180,7 +169,7 @@ label n2:
     $count=0
     $error=""
     hide text
-    hide python_logo
+    hide gopher_logo
     jump q5
 label q5:
     if error != "":
@@ -199,7 +188,7 @@ label q5:
 
 label n3:
     show text "{size=40}{color=#000}Capítulo dos\n\n\nLa Abstracción{/color}{/size}" at top
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     h "Qué pregunta más tonta..."
     h "Es cierto que a la tráquea le llega comida de cuando en cuando..."
     h "Pero no en personas sanas..."
@@ -210,7 +199,7 @@ label n3:
         counter=9
         
     hide text
-    hide python_logo
+    hide gopher_logo
     jump q6
 label q6:
     if counter == 9:
@@ -266,7 +255,7 @@ label q6:
 
 label n4:
     show text "{size=40}{color=#000}Capítulo dos\n\n\nLa Abstracción{/color}{/size}" at top
-    show python_logo at truecenter
+    show gopher_logo at truecenter
     h "Wao, hemos visto como se conectan los órganos del tubo digestivo uno tras otro"
     h "En el caso del carro, del reloj, la página web y del video juego podemos hacer exactamente lo mismo..."
     h "Aún más NO necesitamos ningún programa para ver como estos elementos se relacionan entre sí"
