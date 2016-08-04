@@ -2,7 +2,6 @@ log.txt matches log.txt (None).
 .git/ matches **/.** (None).
 .android.json matches .android.json ([u'android']).
 project.json matches project.json (None).
-Distros/ matches ** ([u'all']).
 game/ matches ** ([u'all']).
 game/tl/ matches ** ([u'all']).
 game/tl/None/ matches ** ([u'all']).
@@ -19,6 +18,7 @@ game/script.rpyc matches ** ([u'all']).
 game/options.rpy matches ** ([u'all']).
 game/saves/ matches game/saves/ (None).
 game/screens.rpy matches ** ([u'all']).
+game/revision de versiones.rpy matches ** ([u'all']).
 game/images/ matches ** ([u'all']).
 game/images/reloj engranajes.jpg matches ** ([u'all']).
 game/images/Poofy Reel.mp3 matches ** ([u'all']).
@@ -40,6 +40,7 @@ game/cache/ matches ** ([u'all']).
 game/cache/bytecode.rpyb matches ** ([u'all']).
 game/cache/screens.rpyb matches ** ([u'all']).
 game/cache/pyanalysis.rpyb matches ** ([u'all']).
+game/revision de versiones.rpyc matches ** ([u'all']).
 game/script.rpy matches ** ([u'all']).
 game/screens.rpyc matches ** ([u'all']).
 Readme.md matches ** ([u'all']).
