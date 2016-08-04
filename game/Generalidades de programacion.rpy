@@ -20,12 +20,22 @@ label inicio_:
     h "En esta ocasión les voy a mostrar ciertas cositas fundamentales del lenguaje Go."
     h "El lenguaje Go es bastante nuevo, en comparación con la enorme familia C (C, Objective C, C++ o C#), Python, Java, JavaScript, etc"
     h "Sin embargo, la idea de este lenguaje, es al igual que otro llamado Swift, el de proveer las mejorar ciertos aspectos de sus predecesores."
-    h "La gran ventaja de Go es que este puede correr en múltiples procesadores simultáneamente"
+    h "La gran ventaja de Go es que este puede correr en múltiples procesos simultáneamente"
 
     $info = True
     h "En la esquina superior derecha, veras un botón que muestra u oculta una serie de enlaces útiles"
     h "Estos enlaces son la página oficial del lenguaje Go, la página de la Wikipedia, el parque recreativo de Go y mi jarrón de propinas de PayPal por si quieres cooperar conmigo"
     h "Vamos a empezar..."
+    h "La sección siguiente trata de principios básicos de programación"
+    h "Es muy similar a lo que mostré en mi aplicación para aprender Python"
+    h "Puede adquirir la aplicación para aprender Python {a=https://play.google.com/store/apps/details?id=com.hedleypanama}aqui{/a}"
+    hide gopher_logo at truecenter
+    menu:
+        "Si lo deseas, puedes saltarte esta parte y entrar de lleno a aprender Go\nPero no te recomiendo hacerlo si nunca has programado\n¿Qué deseas hacer?"
+        "Deseo conocer los principios básicos de programación":
+            pass
+        "Deseo entrar de lleno a aprender Go":
+            jump Go_1
     #hide text
     jump chp1
 label chp1:

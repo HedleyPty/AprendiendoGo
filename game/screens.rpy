@@ -577,7 +577,7 @@ screen _music():
             else:
                 textbutton _("Ocultar enlaces útiles") action SetVariable("enlaces", False)
                 text '{color=#000}{a=https://es.wikipedia.org/wiki/Golang}Página de la Wikipedia del lenguaje Go{/a}{/color}'
-                text '{color=#000}{a=https://es.wikipedia.org/wiki/Python}Página oficial de Go{/a}{/color}'
+                text '{color=#000}{a=https://golang.org}Página oficial de Go{/a}{/color}'
                 text '{color=#000}{a=http://python.org}Parque de diversiones de Go{/a}{/color}'
                 text "{color=#000}{a=[tipJar]}Página oficial de Ren'py{/a}{/color}"
                 text '{color=#000}{a=[tipJar]}Jarrón de propinas de PayPal{/a}{/color}'
