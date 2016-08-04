@@ -8,3 +8,5 @@ label contar:
         jump contar
     show gopher_logo at truecenter
     h "Listo! iniciamos!"
+    h "Vamos a hablar de las variables..."
+    h "El primer tipo es el {color=0ff}bool{/color}"

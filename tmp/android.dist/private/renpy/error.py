@@ -216,10 +216,24 @@ def report_exception(e, editor=True):
     simple = simple.getvalue()
     full = full.getvalue()
 
+    try:
+        if not os.path.isdir(os.path.expanduser("~/.renpy")):
+            os.makedirs(os.path.expanduser("~/.renpy"))
+    except:
+        pass
+
     # Inside of the file, which may not be openable.
     try:
+        tbdir = renpy.config.savedir
+        if tbdir[-1] == '/':
+           tbdir = tbdir[:-1]
+        tbdir = os.path.dirname(tbdir) + "/"
+        try:
+            os.makedirs(tbdir)
+        except:
+            pass
 
-        f, traceback_fn = open_error_file("traceback.txt", "w")
+        f, traceback_fn = open_error_file(tbdir + "traceback.txt", "w")
 
         f.write(codecs.BOM_UTF8)
 
