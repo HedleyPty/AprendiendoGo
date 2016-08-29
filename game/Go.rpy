@@ -8,4 +8,4 @@ label contar:
         jump contar
     show gopher_logo at truecenter
     h "Listo! iniciamos!"
-    jump linea_de_comandos_1
+    jump install_1

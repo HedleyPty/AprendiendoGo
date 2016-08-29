@@ -27,7 +27,6 @@ label music_:
             jump music_
         "Ninguno":
             $ musica = "Poofy Reel.mp3"
-    #Historia
-    #Guia Golang
+    
     h ""
     return
