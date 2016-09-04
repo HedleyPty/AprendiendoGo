@@ -1,4 +1,5 @@
-#!/usr/bin/env python #@PydevCodeAnalysisIgnore
+#! /usr/bin/python
+#@PydevCodeAnalysisIgnore
 
 # This file is part of Ren'Py. The license below applies to Ren'Py only.
 # Games and other projects that use Ren'Py may use a different license.
@@ -73,6 +74,13 @@ def path_to_saves(gamedir, save_directory=None):
 
         return rv
 
+    if gamedir.startswith("/usr/share/games/renpy"):
+        # The gamename is the final component of the path to the gamedir
+        gamename = gamedir[len("/usr/share/games/renpy"):]
+        if gamename.endswith("/game") or gamename.endswith("/data"):
+            gamename = gamename[:-5]
+        return os.path.expanduser("~/.renpy/") + gamename + "/saves"
+
     if renpy.ios:
         from pyobjus import autoclass
         from pyobjus.objc_py_types import enum
@@ -133,16 +141,12 @@ def path_to_saves(gamedir, save_directory=None):
 # Returns the path to the Ren'Py base directory (containing common and
 # the launcher, usually.)
 def path_to_renpy_base():
-    renpy_base = os.path.dirname(os.path.realpath(sys.argv[0]))
+    renpy_base = "/usr/share/games/renpy"
     renpy_base = os.path.abspath(renpy_base)
 
     return renpy_base
 
 ##############################################################################
-
-# The version of the Mac Launcher and py4renpy that we require.
-macos_version = (6, 14, 0)
-linux_version = (6, 14, 0)
 
 # Doing the version check this way also doubles as an import of ast,
 # which helps py2exe et al.

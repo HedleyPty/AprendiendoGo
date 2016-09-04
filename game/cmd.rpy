@@ -5,7 +5,7 @@ label linea_de_comandos_1:
     h "El lenguaje Go hace un programa el cual se puede ejecutar o compilar"
     if renpy.windows:
         h "Dado que esta es una computadora Windows, podremos abrir la \"linea de comandos\" desde el boton de inicio de Windows"
-        h "En correr programa, escribimos cmd.exe y vemos la ventana negra del mal de {color=#ff0}linea de comandos{/color}"
+        h "Para correr este programa, escribimos cmd.exe y vemos la ventana negra del mal de {color=#ff0}linea de comandos{/color}"
         h "Dado que vamos a trabajar en Go o Golang requerimos tener siempre a la mano un atajo para este programa"
         h "Debemos correr esta con privilegios de administrador o privilegios elevados para hacer otras operaciones pertinentes"
         $ cmd="línea de comandos"
@@ -17,12 +17,18 @@ label linea_de_comandos_1:
     elif renpy.mobile:
         h "Este es un dispositivo movil, por lo tanto no se puede correr o complar nada en el lenguaje Go en este mommento"
         $ cmd="línea de comandos para Windows o terminal para sistemas operativos parecidos a Unix"
-    elif renpy.linux:
+    else: 
         h "Dado que esta es una computadora linux, podremos abrir la \"terminal\" como es usual en este sistema operativo"
         h "Existen 3 terminales en Linux: terminal de gnome, la terminal de xterm (y su primito UXTerm) y la interfase de terminal"
         h "La terminal es parte integral del manejo de linux, y en los escritorios es fácil de buscar"
+        h "en el caso de U"
         $ cmd= "terminal"
-    h "Una vez que tenemos acceso a la [cmd], podemos proseguir a instalar Go"
+    h "Una vez que sabemos como acceder a la [cmd], podemos proseguir a instalar Go"
+    h "Vamos a instalar Go "
+    if renpy.mobile:
+        h "Debido a que este es un dispositivo mobil te recomiendo que intentes utilizar una computadora de escritorio con permisos de usuario raiz o administrador para instalar este programa"
+        h "De este modo sacaras mucho mejor provecho de este curso"
+        h "Aqui te dejo las instrucciones como instalar el programa"
     return
     
     
