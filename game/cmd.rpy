@@ -28,7 +28,12 @@ label linea_de_comandos_1:
     if renpy.mobile:
         h "Debido a que este es un dispositivo mobil te recomiendo que intentes utilizar una computadora de escritorio con permisos de usuario raiz o administrador para instalar este programa"
         h "De este modo sacaras mucho mejor provecho de este curso"
-        h "Aqui te dejo las instrucciones como instalar el programa"
+        h "De todos modos te deja qui te dejo las instrucciones de como instalar el programa"
+    h "Es cosa de bajar el instalador y seguir las instrucciones de la {a=https://golang.org/dl} la página de descargas{/a}"
+    h "Antes de dar un paso más, voy a hablarles de las {color=#ff0}variables de entorno{/color}"
+    h "Voy a describirles el concepto de {color=#ff0}variables de entorno{/color}"
+    h "Para entender el concepto de las {color=#ff0}variables de entorno{/color} primero debemos entender como funcionan los íconos"
+    h "El comportamiento de los íconos es el mismo independiente"
     return
     
     
